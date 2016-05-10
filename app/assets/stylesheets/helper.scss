@@ -1,0 +1,7 @@
+$default_margin_space: 15px;
+.mar-top{ margin-top: $default_margin_space; }
+.mar-all{ margin: $default_margin_space; }
+.mar-btm{ margin-bottom: $default_margin_space; }
+.mar-lft{ margin-left: $default_margin_space; }
+.mar-rgt{ margin-right: $default_margin_space }
+.mar-top-4x{ margin-top: $default_margin_space * 4; }

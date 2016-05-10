@@ -1,0 +1,20 @@
+
+.row
+	.col-sm-3.col-xs-12.text-center
+		%string
+			Name:
+		= @host.name
+
+.row
+	- @days.each do |day|
+		.col-sm-3.col-xs-6.text-center
+			= day
+			-	@slots.each do |slot|
+				.row
+					-if @booked_slot[day].index(slot)
+						.booked.btn.btn-danger.mar-top
+							=slot
+					-else
+						=link_to slot, new_booking_path(date: day, slot: slot), class: "btn btn-info mar-top"
+.row.mar-top.mar-lft
+	=link_to 'Manage My Availability', bookings_path, class: 'btn btn-warning'
