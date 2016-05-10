@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
-
+  http_basic_authenticate_with name: "alba", password: "secret", \
+    only: [:index]
   # GET /bookings
   # GET /bookings.json
   def index
